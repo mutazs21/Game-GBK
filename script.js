@@ -1,5 +1,5 @@
 function pesan() {
-    alert("Selamat datang Di Game Batu Gunting kertas")
+    alert("Selamat datang Di Game Batu Gunting kertas, by : mutazs")
 };
 
 const game = () => {
@@ -35,6 +35,89 @@ const game = () => {
         const computerOptions = ["batu", "kertas", "gunting"];
 
         options.forEach(option => {
-            const computerNumber = Match
-        })
+            option.addEventListener("click", function () {
+                const computerNumber = Math.floor(Math.random() * 3);
+                const computerChoice = computerOptions[computerNumber];
+
+                setTimeout(() => {
+                        compareHands(this.textContent, computerChoice);
+                        playerHand.src = `./assets/${this.textContent}.png`;
+                        computerHand.src = `./assets/${computerChoice}.png`;
+                }, 2000);
+
+                playerHand.style.animation = "shakePlayer 2s ease";
+                computerHand.style.animation = "shakeComputer 2s ease";
+            });
+        });
+    };
+
+    const updateScore = () => {
+        const playerScore = document.querySelector(".player-score p");
+        const computerScocre = document.querySelector(".computer-score p");
+        const tieScore = document.querySelector(".tie-score p");
+        
+        playerScore.textContent = pScore;
+        computerScocre.textContent = cScore;
+        document.addEventListener('DOMContentLoaded', function() {
+            tieScore.textContent = tScore;
+        });
+    };
+
+const winner = document.querySelector('.winner');
+const compareHands = (playerChoice, computerChoice) => {
+    if (playerChoice === computerChoice) {
+        winner.textContent = "Seri";
+        tScore++;
+        updateScore();
+        return;
     }
+
+    if (playerChoice === "batu") {
+        if (computerChoice === "gunting") {
+            winner.textContent = "Kamu Menang";
+            pScore++;
+            updateScore();
+            return;
+        } else {
+            winner.textContent = "Komputer Menang";
+            cScore++;
+            updateScore();
+            return;
+        }
+    }
+
+    if (playerChoice === "kertas") {
+        if (computerChoice === "gunting") {
+            winner.textContent = "Komputer Menang";
+            cScore++;
+            updateScore();
+            return;
+        } else {
+            winner.textContent = "Kamu Menang";
+            pScore++;
+            updateScore();
+            return;
+        }
+    }
+
+    if (playerChoice === "gunting") {
+        if (computerChoice === "batu") {
+            winner.textContent = "Komputer Menang";
+            cScore++;
+            updateScore();
+            return;
+        } else {
+            winner.textContent = "Kamu Menang";
+            pScore++;
+            updateScore();
+            return;
+        }
+    }
+}
+
+    startGame();
+    playMatch();
+
+    };
+
+    game()
