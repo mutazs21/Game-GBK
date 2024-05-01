@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Batu Gunting Kertas</title>
+</head>
+
+<body>
+    <section class="game">
+        <div class="score">
+            <div class="player-score">
+                <h2>
+                    <script>
+                        const tamu = prompt('Name:');
+                        alert('Selamat datang di game batu guting kertas, ' + tamu + '!' + " by: mutazs");
+                        document.write(tamu);
+                    </script>
+                </h2>
+                <p>0</p>
+            </div>
+            <div class="tie-score">
+                <h2>Seri</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Komputer</h2>
+                <p>0</p>
+            </div>
+        </div>
+        <div class="intro">
+            <h1>Batu Gunting kertas</h1>
+            <button>Mulai Bermain</button>
+        </div>
+
+        <div class="match fadeOut">
+            <h2 class="winner">Buat Pilihan</h2>
+            <div class="hands">
+                <img class="player-hand" src="assets/batu.png" atl />
+                <img class="computer-hand" src="assets/batu.png" alt />
+            </div>
+            <div class="options">
+                <button class="batu">batu</button>
+                <button class="kertas">kertas</button>
+                <button class="gunting">gunting</button>
+            </div>
+        </div>
+    </section>
+    <!-- Java script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
