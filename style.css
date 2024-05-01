@@ -6,11 +6,10 @@
 
 section {
     height: 100vh;
-    background-image: url('assets/gambar2.jpg');
+    background-color: #333;
     background-size: cover;
     font-family: sans-serif;
 }
-
 .score {
     color: #fff;
     height: 20vh;
@@ -30,7 +29,7 @@ section {
 }
 
 .intro {
-    color: #333;
+    color: #fff;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -65,7 +64,7 @@ section {
 }
 
 .winner {
-    color: #333;
+    color: #fff;
     text-align: center;
     font-size: 50px;
 }
@@ -77,8 +76,17 @@ section {
     align-items: center;
 }
 
+.options {
+    width: 600px;
+}
+
 .player-hand {
     transform: rotateY(180deg);
+    width:100%;
+}
+
+.computer-hand {
+    width:100%;
 }
 
 div.fadeOut {
@@ -166,3 +174,41 @@ div.fadeIn {
         transform: translateY(0px);
     }
 }
+
+@media screen and (max-width: 600px) {
+    .intro h1 {
+        font-size: 30px;
+    }
+    .winner{
+        font-size: 30px;
+    }
+    .intro button,
+    .match button {
+        width:100px;
+        height:35px;
+        font-size:12px;
+    }
+    .options {
+        display:flex;
+        align-items:center;
+        width:400px;
+    }
+    .player-hand {
+        width:40%;
+    }
+    .computer-hand {
+        width:40%;
+    }
+    .score h2 {
+        font-size: 20px;
+        height:3vh;
+    }
+    .intro {
+        height:30vh;
+    }
+    .match {
+        top:40%;
+    }
+}
+
+  

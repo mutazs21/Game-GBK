@@ -9,14 +9,20 @@
     <title>Batu Gunting Kertas</title>
 </head>
 
-<body onload="pesan()">
+<body>
     <section class="game">
         <div class="score">
             <div class="player-score">
-                <h2>Player</h2>
+                <h2>
+                    <script>
+                        const tamu = prompt('Name:');
+                        alert('Selamat datang di game batu guting kertas, ' + tamu + '!' + " by: mutazs");
+                        document.write(tamu);
+                    </script>
+                </h2>
                 <p>0</p>
-            </div class="tie-score">
-            <div>
+            </div>
+            <div class="tie-score">
                 <h2>Seri</h2>
                 <p>0</p>
             </div>

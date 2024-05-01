@@ -1,7 +1,3 @@
-function pesan() {
-    alert("Selamat datang Di Game Batu Gunting kertas, by : mutazs")
-};
-
 const game = () => {
     let pScore = 0;
     let cScore = 0;
@@ -58,9 +54,7 @@ const game = () => {
         
         playerScore.textContent = pScore;
         computerScocre.textContent = cScore;
-        document.addEventListener('DOMContentLoaded', function() {
-            tieScore.textContent = tScore;
-        });
+        tieScore.textContent = tScore;
     };
 
 const winner = document.querySelector('.winner');
